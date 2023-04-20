@@ -1,0 +1,52 @@
+[
+    {
+        "name": "Joan Barduena",
+        "type": "Student",
+        "email": "jbarduen2@art.edu",
+        "classes": [
+            608,
+            607,
+            605
+        ]
+    },
+    {
+        "name": "James Cameron",
+        "type": "Professor",
+        "email": "james2031@art.edu",
+        "classes": [
+            608,
+            607,
+            605
+        ]
+    },
+    {
+        "name": "Rachel Green",
+        "type": "Dentist",
+        "email": "rachelgreen@art.edu",
+        "classes": [
+            608,
+            607,
+            605
+        ]
+    },
+    {
+        "name": "Robin Brown",
+        "type": "Architect",
+        "email": "robinbrown@art.edu",
+        "classes": [
+            608,
+            607,
+            605
+        ]
+    },
+    {
+        "name": "Elon Musk",
+        "type": "CEO",
+        "email": "elonmusk@gmail.com",
+        "classes": [
+            555,
+            556,
+            557
+        ]
+    }
+]
