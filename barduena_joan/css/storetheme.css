@@ -36,7 +36,8 @@ body {
   transform: scale(1.5, 1.5);
 }
 
-.figure.product {
+.figure.product,
+.figure.product-overlay {
   border-radius: 0.5em;
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
   overflow: hidden;
@@ -44,9 +45,14 @@ body {
   transition: all .3s;
 }
 
-.product .figure img {
+.product .figure img,
+.product-overlay img {
   height: 100%;
-  object-fit: contain;
+  object-fit: cover;
+}
+
+.price {
+  font-weight: bold;
 }
 
 .productlist a {
@@ -57,7 +63,6 @@ body {
 .productlist .figure:hover {
   transform: scale(1.02);
 }
-
 
 .product-overlay {
   position: relative;
@@ -71,7 +76,7 @@ body {
   left: 0;
   width: 100%;
   height: 100%;
-  background-color: rgba(0, 0, 0, 0.7);
+  background-color: rgba(0, 0, 0, 0.5);
   opacity: 0;
   transition: all 0.3s;
   display: flex;
@@ -120,4 +125,35 @@ body {
     transform: none;
     padding: 0;
   }
+}
+
+.images-main img {
+  width: 100%;
+  height: 60vh;
+  object-fit: contain;
+}
+
+.images-thumb img {
+  width: 100%;
+  height: 20vh;
+  object-fit: contain;
+}
+
+.card-section {
+  margin: 0 1em;
+  padding: 1em;
+}
+
+.card-section~.card-section {
+  border-top: 1px solid var(--color-neutral-light);
+}
+
+.cart-title {
+  padding: 0 2em;
+}
+
+.overview {
+  padding: 2em;
+  text-align: justify;
+  line-height: 1.5em;
 }

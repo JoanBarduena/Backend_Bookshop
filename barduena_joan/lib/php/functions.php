@@ -23,9 +23,9 @@ function makeConn()
 
 function makeQuery($conn, $qry)
 {
-    $a = [];
     $result = $conn->query($qry);
     if ($conn->errno) die($conn->error);
+    $a = [];
     while ($row = $result->fetch_object()) {
         $a[] = $row;
     }

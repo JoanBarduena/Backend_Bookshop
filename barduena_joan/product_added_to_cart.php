@@ -1,3 +1,10 @@
+<?php
+
+include_once "lib/php/functions.php";
+
+$product = makeQuery(makeConn(), "SELECT * FROM `products` WHERE `id` = " . $_GET['id'])[0];
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -10,7 +17,7 @@
     <?php include "parts/navbar.php"; ?>
     <div class="container">
         <div class="card soft">
-            <h2>Item ____ has been added to the cart</h2>
+            <h2><?= $product->title ?> <span style="font-weight:normal;">has been added to your cart.</span></h2>
             <div class="display-flex">
                 <div class="flex-none"><a href="product_list.php">Continue Shopping</a></div>
                 <div class="flex-stretch"></div>
