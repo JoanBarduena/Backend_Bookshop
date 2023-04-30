@@ -403,6 +403,12 @@ a:hover {
   transition: all .1s ease-in-out;
 }
 
+.form-button.inline {
+  background-color: var(--color-neutral-light);
+  color: var(--color-black);
+  width: initial;
+}
+
 .form-button-fit {
   width: fit-content;
   display: inline-block;

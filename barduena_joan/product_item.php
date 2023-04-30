@@ -29,7 +29,10 @@ $product = makeQuery(makeConn(), "SELECT * FROM `products` WHERE `id` = " . $_GE
                 </div>
             </div>
             <div class="col-xs-12 col-md-7">
-                <div class="card soft flat">
+                <form class="card soft flat" method="post" action="cart_actions.php?action=add-to-cart">
+
+                    <input type="hidden" name="product-id" value="<?= $product->id ?>">
+
                     <div class="card-section">
                         <h2 class="product-title"><?= $product->title ?></h2>
                         <div class="product-price">&dollar;<?= $product->price ?></div>
@@ -38,8 +41,8 @@ $product = makeQuery(makeConn(), "SELECT * FROM `products` WHERE `id` = " . $_GE
                     <div class="card-section display-flex">
                         <div class="flex-stretch">
                             <label for="product-amount" class="form-label">Amount</label>
-                            <div class="form-select" id="product-amount">
-                                <select>
+                            <div class="form-select">
+                                <select id="product-amount" name="product-amount">
                                     <option>1</option>
                                     <option>2</option>
                                     <option>3</option>
@@ -55,11 +58,11 @@ $product = makeQuery(makeConn(), "SELECT * FROM `products` WHERE `id` = " . $_GE
                         </div>
                         <div class="flex-stretch">
                             <div class="card-section">
-                                <a href="product_added_to_cart.php?id=<?= $product->id ?>" class="form-button">Add to cart</a>
+                                <input class="form-button" type="submit" value="Add To Cart">
                             </div>
                         </div>
                     </div>
-                </div>
+                </form>
                 <div class="card soft overview">
                     <h2>Overview</h2>
                     <p><?= $product->description ?></p>
