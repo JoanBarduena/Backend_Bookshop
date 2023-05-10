@@ -409,6 +409,17 @@ a:hover {
   width: initial;
 }
 
+.form-button.light {
+  color: var(--color-black);
+  background-color: var(--color-neutral-light);
+  margin-right: 1em;
+}
+
+.form-button:focus {
+  background-color: var(--color-main-dark);
+  color: var(--color-white);
+}
+
 .form-button-fit {
   width: fit-content;
   display: inline-block;
