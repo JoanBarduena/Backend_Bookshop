@@ -520,3 +520,9 @@ a:hover {
 .lock-icon {
   transform: scale(0.8);
 }
+
+.image-thumb img {
+  width: 10em;
+  height: auto;
+  object-fit: contain;
+}
