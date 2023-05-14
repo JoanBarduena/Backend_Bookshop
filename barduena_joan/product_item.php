@@ -1,6 +1,7 @@
 <?php
 
 include_once "lib/php/functions.php";
+include_once "parts/templates.php";
 
 $product = makeQuery(makeConn(), "SELECT * FROM `products` WHERE `id` = " . $_GET['id'])[0];
 
@@ -35,7 +36,11 @@ $product = makeQuery(makeConn(), "SELECT * FROM `products` WHERE `id` = " . $_GE
 
                     <div class="card-section">
                         <h2 class="product-title"><?= $product->title ?></h2>
-                        <div class="product-price">&dollar;<?= $product->price ?></div>
+                        <div class="product-author"><strong>Author: </strong><?= $product->author ?></div>
+                        <div class="product-category"><strong>Category: </strong><?= $product->category ?></div>
+                        <div class="form-control">
+                            <div class="product-price"><strong>&dollar;<?= $product->price ?></strong></div>
+                        </div>
                     </div>
 
                     <div class="card-section display-flex">
@@ -69,6 +74,10 @@ $product = makeQuery(makeConn(), "SELECT * FROM `products` WHERE `id` = " . $_GE
                 </div>
             </div>
         </div>
+        <h2>Recommended Books</h2>
+        <?php
+        recommendedSimilar($product->category, $product->id);
+        ?>
     </div>
 
 </body>

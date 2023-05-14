@@ -1,5 +1,6 @@
 <?php
 include_once "lib/php/functions.php";
+include_once "parts/templates.php";
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -31,6 +32,17 @@ include_once "lib/php/functions.php";
                 We are dedicated to bringing the joy of reading to people's lives through our vast selection of books and exceptional customer service.
             </p>
         </div>
+    </div>
+
+    <div class="container">
+        <h2>Latest Fantasy Books</h2>
+        <?php
+        recommendedCategory("Fantasy")
+        ?>
+        <h2>Latest Fiction Books</h2>
+        <?php
+        recommendedCategory("Fiction")
+        ?>
     </div>
 
 </body>
